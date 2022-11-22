@@ -10,8 +10,13 @@ function clickfun (){
    // console.log("get: "+getnumber);
     getnumber = parseInt(getnumber);
     //console.log("get: "+getnumber);
+   // console.log(10000000)
     if(getnumber>0){
-        showtext.innerText ="(In Word : "+ lactocrore(getnumber) + " Taka Only.)";
+        if (getnumber>=10000000) {
+            showtext.innerText ="Number Should not be Greater then 7 digit";
+        }else{
+            showtext.innerText ="(In Word : "+ lactocrore(getnumber) + " Taka Only.)";
+        }
     }else{
         showtext.innerText ="No data";
     }
@@ -170,10 +175,11 @@ function clickfun (){
      
      return mtext;
  }
+
  function lactocrore(mnumber){
     let mtext = "";
     let tempno = 0;
-    console.log(mnumber)
+   // console.log(mnumber)
    
     if(mnumber>=100000 && mnumber<10000000){
             
